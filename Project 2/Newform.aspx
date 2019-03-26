@@ -7,6 +7,9 @@
 <meta charset="UTF-8">
 	<title>WillCode4Food - Login Form</title>
 	  <link rel="stylesheet" type="text/css" href="Project.css">
+    	<script type="text/javascript" 
+          src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+        </script>
 	  <style type="text/css">
        /*td
        {
@@ -97,39 +100,49 @@ h1
             <br />
             <h1>Insurance Form</h1>          
             <br />
-        <form action="">
+        <form runat="server" action="">
 		<div class="verifyingInformation">
 			
             <label for="date" id="dateLabel">Date: </label> 
-			<input type="date" id="date">
+			<asp:TextBox runat="server" type="date" id="dateTextBox"></asp:TextBox>
+            <label id="dateTime"></label>
 			<br>
 
 			<label for="firstName" id="fNameLabel">First Name: </label>
-			<input type="text" id="firstName">
+			<asp:TextBox runat="server" type="text" id="firstName"></asp:TextBox>
+            <label id="firstNTimer"></label>
 
 			<label for="lstName" id="lNameLabel">Last Name: </label>
-			<input type="text" id="lastName">
+			<asp:TextBox runat="server" type="text" id="lastName"></asp:TextBox>
+            <label id="lastNTimer"></label>
 			<br>
 
 			<label for="phone" id="phoneLabel">Phone: </label>
-			<input type="text" id="phone">
+			<asp:TextBox runat="server" type="text" id="phone"></asp:TextBox>
+            <label id="phoneTimer"></label>
 
 			<label for="dateOfIncident" id="dateOfIncidentLabel">Date of Incident: <label>
-			<input type="date" id="dateOfIncident">
+			<asp:TextBox runat="server" type="date" id="dateOfIncident"></asp:TextBox>
+            <label id="dateIncidentTimer"></label>
 			<br>
 
 			<label for="policyNumber" id="policyNumberLabel">Policy Number: </label>
-			<input type="text" id="policyNumber">
-			
+			<asp:TextBox runat="server" type="text" id="policyNumber"></asp:TextBox>
+			<label id="policyTimer"></label>
+
 			<label for="lastOfSsn" id="lastOfSsnLabel">Last four of SS#: </label>
-			<input type="text" id="lastOfSsn">
-			<br>
+			<asp:TextBox runat="server" type="text" id="lastOfSsn"></asp:TextBox>
+			<label id="SSNTimer"></label>
+            <br>
 
 			<label for="address" id="addressLabel">Address: </label>
-			<input type="text" id="address">
+			<asp:TextBox runat="server" type="text" id="address"></asp:TextBox>
+            <label id="addressTimer"></label>
+
 			<label for="zipCode">Zip:</label>
-			<input type="text" id="zipCode">
-			
+			<asp:TextBox runat="server" type="text" id="zipCode"></asp:TextBox>
+			<label id="ZipTimer"></label>
+
 			<select>
 			<option value="AL">AL</option>
 			<option value="AK">AK</option>
@@ -188,27 +201,26 @@ h1
 			<label for="multiplePeople">Multiple People?
 			</label>
 			<div class=radioOptions>
-				<input type="radio" value="yes">
+				<asp:TextBox runat="server" type="radio" value="yes"></asp:TextBox>
 				<label for="yes">Yes</label>
-				<input type="radio" value="no">
+				<asp:TextBox runat="server" type="radio" value="no"></asp:TextBox>
 				<label for="no">No</label>
 			</div>
 
 		
 			<label for="incidentDesc">Incident description:</label>
 			<br>
-			<textarea name="" id="incidentDesc" cols="30" rows="10">
-			</textarea>
-			<br>
+<%--			<textarea name="" id="incidentDesc" cols="30" rows="10">
+			</textarea>--%> <asp:TextBox runat="server" Width="250px" Height="200px" ID="descriptionTextBox"></asp:TextBox>
+                <label runat ="server" id="descriptionTimer"></label>
+			<br />
+            <br />   
 		</div>
 
 		<div id="buttons">
-			<input type="submit" >
-			<input type="submit" value="Save">
-
+			<asp:TextBox runat="server" type="submit" ></asp:TextBox>
+			<asp:TextBox runat="server" type="submit" value="Save"></asp:TextBox>
 		</div>
-
-
 		</form>
 
 	</div>
@@ -217,4 +229,129 @@ h1
 		<div>Stupid<span>Company</span></div>
 	</div>	
 </body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+	        var timer
+            $('#dateTextBox').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('dateTime').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#dateTextBox').focusout(function() {
+                if ( !$('#dateTextBox').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#firstName').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('firstNTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#firstName').focusout(function() {
+                if ( !$('#firstName').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#lastName').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('lastNTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#lastName').focusout(function() {
+                if ( !$('#lastName').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#phone').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('phoneTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#phone').focusout(function() {
+                if ( !$('#phone').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#dateOfIncident').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('dateIncidentTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#dateOfIncident').focusout(function() {
+                if ( !$('#dateOfIncident').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#policyNumber').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('policyTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#policyNumber').focusout(function() {
+                if ( !$('#policyNumber').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#lastOfSsn').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('SSNTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#lastOfSsn').focusout(function() {
+                if ( !$('#lastOfSsn').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#address').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('addressTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#address').focusout(function() {
+                if ( !$('#address').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+                    $('#zipCode').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('ZipTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#zipCode').focusout(function() {
+                if ( !$('#zipCode').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+                });
+
+             $('#descriptionTextBox').focusin(function() {
+                  var sec = 0;
+                  timer = setInterval(function(){
+                  document.getElementById('descriptionTimer').innerHTML='00:'+sec;
+                  sec++;
+            }, 1000);
+            }).add('#descriptionTextBox').focusout(function() {
+                if ( !$('#descriptionTextBox').is(':focus') ) {
+                    clearTimeout(timer,1000)
+                }
+            });
+        });
+</script>
+
 </html>
