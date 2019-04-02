@@ -13,6 +13,15 @@ namespace Project_2 {
     public partial class Newform {
         
         /// <summary>
+        /// dateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dateLabel;
+        
+        /// <summary>
         /// dateTextBox control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,24 @@ namespace Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox dateTextBox;
+        
+        /// <summary>
+        /// dateTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dateTime;
+        
+        /// <summary>
+        /// fNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fNameLabel;
         
         /// <summary>
         /// firstName control.
@@ -31,6 +58,24 @@ namespace Project_2 {
         protected global::System.Web.UI.WebControls.TextBox firstName;
         
         /// <summary>
+        /// firstNTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox firstNTimer;
+        
+        /// <summary>
+        /// lNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lNameLabel;
+        
+        /// <summary>
         /// lastName control.
         /// </summary>
         /// <remarks>
@@ -38,6 +83,24 @@ namespace Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lastName;
+        
+        /// <summary>
+        /// lastNTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox lastNTimer;
+        
+        /// <summary>
+        /// phoneLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label phoneLabel;
         
         /// <summary>
         /// phone control.
@@ -49,6 +112,24 @@ namespace Project_2 {
         protected global::System.Web.UI.WebControls.TextBox phone;
         
         /// <summary>
+        /// phoneTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox phoneTimer;
+        
+        /// <summary>
+        /// dateOfIncidentLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dateOfIncidentLabel;
+        
+        /// <summary>
         /// dateOfIncident control.
         /// </summary>
         /// <remarks>
@@ -56,6 +137,24 @@ namespace Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox dateOfIncident;
+        
+        /// <summary>
+        /// dateIncidentTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dateIncidentTimer;
+        
+        /// <summary>
+        /// policyNumberLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label policyNumberLabel;
         
         /// <summary>
         /// policyNumber control.
@@ -67,6 +166,24 @@ namespace Project_2 {
         protected global::System.Web.UI.WebControls.TextBox policyNumber;
         
         /// <summary>
+        /// policyTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox policyTimer;
+        
+        /// <summary>
+        /// lastOfSsnLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lastOfSsnLabel;
+        
+        /// <summary>
         /// lastOfSsn control.
         /// </summary>
         /// <remarks>
@@ -74,6 +191,24 @@ namespace Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lastOfSsn;
+        
+        /// <summary>
+        /// SSNTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SSNTimer;
+        
+        /// <summary>
+        /// addressLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label addressLabel;
         
         /// <summary>
         /// address control.
@@ -85,6 +220,15 @@ namespace Project_2 {
         protected global::System.Web.UI.WebControls.TextBox address;
         
         /// <summary>
+        /// addressTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox addressTimer;
+        
+        /// <summary>
         /// zipCode control.
         /// </summary>
         /// <remarks>
@@ -92,6 +236,51 @@ namespace Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox zipCode;
+        
+        /// <summary>
+        /// ZipTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ZipTimer;
+        
+        /// <summary>
+        /// State control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList State;
+        
+        /// <summary>
+        /// stateTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox stateTimer;
+        
+        /// <summary>
+        /// people control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList people;
+        
+        /// <summary>
+        /// peopleTimer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox peopleTimer;
         
         /// <summary>
         /// descriptionTextBox control.
@@ -103,12 +292,12 @@ namespace Project_2 {
         protected global::System.Web.UI.WebControls.TextBox descriptionTextBox;
         
         /// <summary>
-        /// descriptionTimer control.
+        /// descriptionTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl descriptionTimer;
+        protected global::System.Web.UI.WebControls.TextBox descriptionTime;
     }
 }

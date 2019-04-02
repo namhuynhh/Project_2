@@ -12,34 +12,39 @@ namespace Project_2
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-            MySqlCommand cmd = new MySqlCommand();
+        MySqlCommand cmd = new MySqlCommand();
 
-            MySqlConnection con = new MySqlConnection(ConfigurationManager.ConnectionStrings["myDB"].ConnectionString);
-            MySqlDataAdapter ada = new MySqlDataAdapter();
-            DataSet da = new DataSet();
+        MySqlConnection con = new MySqlConnection(ConfigurationManager.ConnectionStrings["myDB"].ConnectionString);
+        MySqlDataAdapter ada = new MySqlDataAdapter();
+        DataSet da = new DataSet();
+ 
 
-            protected void Page_Load(object sender, EventArgs e)
-            {
+        protected void Page_Load(object sender, EventArgs e)
+        {
             txtUser.Attributes.Add("placeholder", "Username");
             txtPassword.Attributes.Add("placeholder", "Password");
-                con.Open();
-            }
-            protected void LogOn_Click(object sender, EventArgs e)
+            con.Open();
+        }
+        protected void LogOn_Click(object sender, EventArgs e)
+        {
+           
+            cmd.CommandText = "select * from login where username = '" + txtUser.Text + "' and password = '" + txtPassword.Text + "'";
+            cmd.Connection = con;
+            ada.SelectCommand = cmd;
+            ada.Fill(da, "login");
+            cmd.CommandText = "select userID from login";
+
+            if (da.Tables[0].Rows.Count > 0)
             {
-                cmd.CommandText = "select * from users where username = '" + txtUser.Text + "' and password = '" + txtPassword.Text + "'";
-                cmd.Connection = con;
-                ada.SelectCommand = cmd;
-                ada.Fill(da, "users");
-                if (da.Tables[0].Rows.Count > 0)
-                {
-                    label1.Text = "Users Information was found, Click the Button to continue";
-                btnNext.Visible = true;
-                }
-                else
-                {
-                    label1.Text = "The user's information entered is not valid, please enter valid information";
-                }
+                var id = da.Tables[0].Rows[0].ItemArray[0];
+                Application["userId"] = Convert.ToInt32(id);
+                Response.Redirect("~/AfterLogin.aspx");
             }
+            else
+            {
+                label1.Text = "The user's information entered is not valid, please enter valid information";
+            }
+        }
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
@@ -47,3 +52,4 @@ namespace Project_2
         }
     }
 }
+
