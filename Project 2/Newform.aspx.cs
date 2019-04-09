@@ -50,7 +50,7 @@ namespace Project_2
             }
 
 
-            var formCommand = "INSERT INTO `completedforms`(`userID`, `date`, `firstName`, `lastName`, `phone`, `dateOfIncident`, `policyNumber`, `ssn`, `address`, `zipCode`, `state`, `multiplePeople`, `description`) VALUES ('@userID', '@date', '@firstName', '@lastName', '@phone', '@dateOfIncident', '@policyNumber', '@ssn', '@address', '@zipCode', '@state', '@multiplePeople','@description')";
+            var formCommand = "INSERT INTO `completedforms`(`userID`, `date`, `firstName`, `lastName`, `phone`, `dateOfIncident`, `policyNumber`, `ssn`, `address`, `zipCode`, `state`, `multiplePeople`, `description`) VALUES (@userID, @date, @firstName, @lastName, @phone, @dateOfIncident, @policyNumber, @ssn, @address, @zipCode, @state, @multiplePeople,@description)";
             using (MySqlConnection con = new MySqlConnection(ConfigurationManager.ConnectionStrings["myDB"].ConnectionString))
             {
                 using (MySqlCommand cmd = new MySqlCommand(formCommand, con))
@@ -72,6 +72,18 @@ namespace Project_2
                     cmd.ExecuteNonQuery();
                 }
             }
+            dateTextBox.Text = "";
+            firstName.Text = "";
+            lastName.Text = "";
+            phone.Text = "";
+            dateOfIncident.Text = "";
+            policyNumber.Text = "";
+            lastOfSsn.Text = "";
+            address.Text = "";
+            zipCode.Text = "";
+            State.Text = "";
+            people.Text = "";
+            descriptionTextBox.Text = "";
         }
     }
 }

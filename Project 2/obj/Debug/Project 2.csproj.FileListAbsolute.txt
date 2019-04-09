@@ -82,7 +82,6 @@ C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Project 2.dll
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Project 2.pdb
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\MySql.Data.dll
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\MySql.Data.xml
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\obj\Debug\Project 2.csprojAssemblyReference.cache
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\obj\Debug\Project 2.csproj.CoreCompileInputs.cache
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\obj\Debug\Project 2.csproj.CopyComplete
 F:\ASU 2019\CIS440\Project_2\Project 2\bin\Project 2.dll.config

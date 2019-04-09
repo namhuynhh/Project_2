@@ -228,7 +228,6 @@ h1
 
 		<div id="buttons">
             <asp:Button runat="server" Text="Submit" OnClick="Unnamed_Click" />
-			<asp:TextBox runat="server" type="submit"></asp:TextBox>
 			<asp:TextBox runat="server" type="submit" value="Save"></asp:TextBox>
 		</div>
 		</form>
@@ -363,7 +362,7 @@ h1
                   var sec = 0;
                  timer = setInterval(function () {
                       $('#<%=descriptionTime.ClientID%>').val("00:00:"+sec);
-                  document.getElementById('descriptionTimer').innerHTML='00:'+sec;
+                  document.getElementById('descriptionTime').innerHTML='00:'+sec;
                   sec++;
             }, 1000);
             }).add('#descriptionTextBox').focusout(function() {
