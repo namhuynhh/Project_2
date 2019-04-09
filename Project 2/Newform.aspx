@@ -6,239 +6,333 @@
 	
 <meta charset="UTF-8">
 	<title>WillCode4Food - Login Form</title>
-	  <link rel="stylesheet" type="text/css" href="Project.css">
+	 <!-- <link rel="stylesheet" type="text/css" href="Project.css"> -->
     	<script type="text/javascript" 
           src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
         </script>
 	  <style type="text/css">
-       /*td
-       {
-           font-size:24px;
-           text-align: left;
-       }*/
-       
-h1
-{
-	text-align: center;
-}
+      	  
+  *{
+      box-sizing: border-box;
+      margin: 0;
+      text-align:center;
+      font-family: sans-serif;
+      font-size: 2vh;
+      padding: 0;
+     
+  }
+  @media only screen and (max-width: 499px) {
+			.col-sm-00  {display: 		   none; }
+			.col-sm-12 	{width: 		   100%; }
+			body 		{background-color: white;}
+			[class*="col-sm-"] {
+				border: 1px solid black	;
+			}
+            .laLabel {text-align: left;}
+		}
+  @media only screen and (min-width: 500px) {
+			.col-md-00  {display: 		   none; }
+			.col-md-01  {width: 		  8.33%; }
+			.col-md-02  {width: 		 16.66%; }
+			.col-md-03  {width: 		 25.00%; }
+			.col-md-04  {width: 		 33.33%; }
+			.col-md-05  {width: 		 41.66%; }
+			.col-md-06  {width: 		 50.00%; }
+			.col-md-07  {width: 		 58.33%; }
+			.col-md-08  {width: 		 66.66%; }
+			.col-md-09  {width: 		 75.00%; }
+			.col-md-10  {width: 		 83.33%; }
+			.col-md-11  {width: 		 91.66%; }
+			.col-md-12  {width: 		100.00%; }
+			body 		{background-color:white;}
+			[class*="col-md-"] {
+				border: 		;
+			}
+		}
 
-#form
-{
-	float:initial;
-	margin-left: 7%;
-	margin-right: 7%%;
-}
+  	@media only screen and (min-width: 1024px) {
+			.col-md-00  {display: 		initial; }
+			.col-sm-00  {display:       initial; }
+			.col-lg-01  {width: 		  8.33%; }
+			.col-lg-02  {width: 		 16.66%; }
+			.col-lg-03  {width: 		 25.00%; }
+			.col-lg-04  {width: 		 33.33%; }
+			.col-lg-05  {width: 		 41.66%; }
+			.col-lg-06  {width: 		 50.00%; }
+			.col-lg-07  {width: 		 58.33%; }
+			.col-lg-08  {width: 		 66.66%; }
+			.col-lg-09  {width: 		 75.00%; }
+			.col-lg-10 	{width: 		 83.33%; }
+			.col-lg-11 	{width: 		 91.66%; }
+			.col-lg-12 	{width: 		100.00%; }
+			body 		{background-color: white;}
+			[class*="col-lg-"] {
+				border:;
+			}
+           
+		}
 
-#date, #dateLabel
-{
-	display: inline-block;
-	float:initial;
-	
-}
-#date{
-	margin-right: 60%;
-}
-#firstName, #fNameLabel,
-#lastName, #lNameLabel
-{
-	display: inline-block;
-	float:initial;
-	clear: left;
-}
-
-/*/
-*{
-	text-align: center;
-}
-#phone
-{
-	display: inline-block;
-	float: initial;
-	justify-content: space-around;
-
-}
-#phoneLabel
-{
-	display: inline-block;
-	clear: left;
-	width: 150px;
-	text-align: right;
-	float: initial;
-}
-#dateOfIncidentLabel
-{
-	display: inline-block;
-	clear: left;
-	float: initial;
-	padding-right: 12%;
-}
-#dateOfIncident
-{
-	display: inline-block;
-	clear: left;
-	float: initial;
-	align: left;
-
-} */
-#people {text-align: center;
-         margin-left: 875px;
-}
-.LabelsCSS
+  .LabelsCSS
 {
     display: none;  
 }
+    .logo div {
+        color: #000000;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 7vh;
+        font-weight: 200;
+        border: 4px solid black;
+    }
+    .logo div span {color: #5379fa;
+                    font-size: 7vh;
+    }
 
-	  	.logo
-	  	{
-	  		top: calc(7% - 50px);
-			left: calc(17% - 300px);
-	  	}
+    [class*="col-"] {
+			float: 				left;
+			border-radius: 		10px;
+		}
+   .row::after {
+			content: 			"";
+			clear: 				both;
+			display: 			block;
+		}
+   .radioButtons{text-align:center;}
+   .mainForm{
+      border: 2px solid black; 
+       border-radius: 10px;
+   }
 	  </style>
 </head>
 
-<body>
-	<div class ="main"style="text-align: center;" >
-	</div>
-	<div class ="gradient">
-        <div id="form" style="text-align:center;">
-            <br />
-            <br /> 
-            <br />
-            <br />
-            <h1>Insurance Form</h1>          
-            <br />
-        <form runat="server">
-		<div class="verifyingInformation">
+<body onload="initialize()">
+    <div class="row">
+        <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>    
+            <div class ="logo" style="">
+		        <div class="col-lg-06 col-md-08 col-sm-12">
+                    Insurance<span>CO.</span>
+		        </div>
+	        </div>
+        <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
+    </div>  
+
+    <div class="row">
+        <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
+
+            <div class="col-sm-12 col-md-08 col-lg-06">
+
+
+   <form runat="server" class="mainForm" >
+		   <!-- <div class="verifyingInformation"> -->
 			
-            <asp:Label runat="server" for="date" id="dateLabel">Date: </asp:Label> 
-			<asp:TextBox runat="server" type="date" id="dateTextBox"></asp:TextBox>
-            <asp:TextBox runat="server" ID="dateTime" CssClass="LabelsCSS"> 0 </asp:TextBox>
-			<br>
+                <div class="row">
+                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-12 col-md-05 col-lg-05">
 
-			<asp:Label runat="server" for="firstName" id="fNameLabel">First Name: </asp:Label>
-			<asp:TextBox runat="server" type="text" id="firstName"></asp:TextBox>
-            <asp:TextBox runat="server" ID="firstNTimer" CssClass="LabelsCSS"></asp:TextBox>
+                        <asp:Label runat="server" for="date" id="dateLabel" CssClass:laLabel>Date: </asp:Label>
+                        <br />
+                        <asp:TextBox runat="server" type="date" id="dateTextBox"></asp:TextBox>
+                    </div>
+                   
+                        
+                        <asp:TextBox runat="server" ID="dateTime" CssClass="LabelsCSS"> 0 </asp:TextBox>
+                    
+                    <div class="col-sm-00 col-md-04 col-lg-03 ">&nbsp;</div>
+                    <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
+                </div>
+           
+			
+                <div class="row">
+                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-12 col-md-05 col-lg-05">
+			            <asp:Label runat="server" for="firstName" id="fNameLabel" CssClass="laLabel">First Name: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="firstName"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="firstNTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-12 col-md-06 col-lg-06">    
+                        <asp:Label runat="server" for="lstName" id="lNameLabel">Last Name: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="lastName"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="lastNTimer" CssClass="LabelsCSS">0</asp:TextBox>
+                    </div>
+                </div>
 
-			<asp:Label runat="server" for="lstName" id="lNameLabel">Last Name: </asp:Label>
-			<asp:TextBox runat="server" type="text" id="lastName"></asp:TextBox>
-            <asp:TextBox runat="server" ID="lastNTimer" CssClass="LabelsCSS">0</asp:TextBox>
-			<br>
+                <div class="row">
+                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-12 col-md-05 col-lg-05">
+                        <asp:Label runat="server" for="phone" id="phoneLabel">Phone: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="phone"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="phoneTimer" CssClass="LabelsCSS"></asp:TextBox>
+			        </div>   
+                    <div class="col-sm-12 col-md-06 col-lg-06">
+                        <asp:Label runat="server" for="dateOfIncident" id="dateOfIncidentLabel">Date of Incident: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="date" id="dateOfIncident"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="dateIncidentTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>     
 
-			<asp:Label runat="server" for="phone" id="phoneLabel">Phone: </asp:Label>
-			<asp:TextBox runat="server" type="text" id="phone"></asp:TextBox>
-            <asp:TextBox runat="server" ID="phoneTimer" CssClass="LabelsCSS"></asp:TextBox>
+                </div>
 
-			<asp:Label runat="server" for="dateOfIncident" id="dateOfIncidentLabel">Date of Incident: </asp:Label>
-			<asp:TextBox runat="server" type="date" id="dateOfIncident"></asp:TextBox>
-            <asp:TextBox runat="server" ID="dateIncidentTimer" CssClass="LabelsCSS"></asp:TextBox>
-			<br>
+                <div class="row">
+                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-12 col-md-05 col-lg-05">
+			            <asp:Label runat="server" for="policyNumber" id="policyNumberLabel">Policy Number: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="policyNumber"></asp:TextBox>
+			            <asp:TextBox runat="server" ID="policyTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-12 col-md-06 col-lg-06">
+                        <asp:Label runat="server" for="lastOfSsn" id="lastOfSsnLabel">Last four of SS#: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="lastOfSsn"></asp:TextBox>
+			            <asp:TextBox runat="server" ID="SSNTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+                </div>
+            
+          <div class="row">
+                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-12 col-md-04 col-lg-03">
+                        <asp:Label runat="server" for="address" id="addressLabel">Address: </asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="address"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="addressTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-00 col-md-01 col-lg-02">&nbsp;</div>
+                    <div class="col-sm-12 col-md-03 col-lg-02">
+			            <asp:Label runat="server" for="zipCode">Zip:</asp:Label>
+                        <br />
+			            <asp:TextBox runat="server" type="text" id="zipCode"></asp:TextBox>
+			            <asp:TextBox runat="server" ID="ZipTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-12 col-md-02 col-lg-03">
+                        <asp:Label runat="server" for="state">State: </asp:Label>
+                        <br />
+			            <asp:DropDownList runat="server" ID="State">
+			            <asp:ListItem runat="server" value="AL">AL</asp:ListItem>
+			            <asp:ListItem runat="server" value="AK">AK</asp:ListItem>
+			            <asp:ListItem runat="server" value="AZ">AZ</asp:ListItem>
+			            <asp:ListItem runat="server" value="AR">AR</asp:ListItem>
+			            <asp:ListItem runat="server" value="CA">CA</asp:ListItem>
+			            <asp:ListItem runat="server" value="CO">CO</asp:ListItem>
+			            <asp:ListItem runat="server" value="CT">CT</asp:ListItem>
+			            <asp:ListItem runat="server" value="DE">DE</asp:ListItem>
+			            <asp:ListItem runat="server" value="DC">DC</asp:ListItem>
+			            <asp:ListItem runat="server" value="FL">FL</asp:ListItem>
+			            <asp:ListItem runat="server" value="GA">GA</asp:ListItem>
+			            <asp:ListItem runat="server" value="HI">HI</asp:ListItem>
+			            <asp:ListItem runat="server" value="ID">ID</asp:ListItem>
+			            <asp:ListItem runat="server" value="IL">IL</asp:ListItem>
+			            <asp:ListItem runat="server" value="IN">IN</asp:ListItem>
+			            <asp:ListItem runat="server" value="IA">IA</asp:ListItem>
+			            <asp:ListItem runat="server" value="KS">KS</asp:ListItem>
+			            <asp:ListItem runat="server" value="KY">KY</asp:ListItem>
+			            <asp:ListItem runat="server" value="LA">LA</asp:ListItem>
+			            <asp:ListItem runat="server" value="ME">ME</asp:ListItem>
+			            <asp:ListItem runat="server" value="MD">MD</asp:ListItem>
+			            <asp:ListItem runat="server" value="MA">MA</asp:ListItem>
+			            <asp:ListItem runat="server" value="MI">MI</asp:ListItem>
+			            <asp:ListItem runat="server" value="MN">MN</asp:ListItem>
+			            <asp:ListItem runat="server" value="MS">MS</asp:ListItem>
+			            <asp:ListItem runat="server" value="MO">MO</asp:ListItem>
+			            <asp:ListItem runat="server" value="MT">MT</asp:ListItem>
+			            <asp:ListItem runat="server" value="NE">NE</asp:ListItem>
+			            <asp:ListItem runat="server" value="NV">NV</asp:ListItem>
+			            <asp:ListItem runat="server" value="NH">NH</asp:ListItem>
+			            <asp:ListItem runat="server" value="NJ">NJ</asp:ListItem>
+			            <asp:ListItem runat="server" value="NM">NM</asp:ListItem>
+			            <asp:ListItem runat="server" value="NY">NY</asp:ListItem>
+			            <asp:ListItem runat="server" value="NC">NC</asp:ListItem>
+			            <asp:ListItem runat="server" value="ND">ND</asp:ListItem>
+			            <asp:ListItem runat="server" value="OH">OH</asp:ListItem>
+			            <asp:ListItem runat="server" value="OK">OK</asp:ListItem>
+			            <asp:ListItem runat="server" value="OR">OR</asp:ListItem>
+			            <asp:ListItem runat="server" value="PA">PA</asp:ListItem>
+			            <asp:ListItem runat="server" value="RI">RI</asp:ListItem>
+			            <asp:ListItem runat="server" value="SC">SC</asp:ListItem>
+			            <asp:ListItem runat="server" value="SD">SD</asp:ListItem>
+			            <asp:ListItem runat="server" value="TN">TN</asp:ListItem>
+			            <asp:ListItem runat="server" value="TX">TX</asp:ListItem>
+			            <asp:ListItem runat="server" value="UT">UT</asp:ListItem>
+			            <asp:ListItem runat="server" value="VT">VT</asp:ListItem>
+			            <asp:ListItem runat="server" value="VA">VA</asp:ListItem>
+			            <asp:ListItem runat="server" value="WA">WA</asp:ListItem>
+			            <asp:ListItem runat="server" value="WV">WV</asp:ListItem>
+			            <asp:ListItem runat="server" value="WI">WI</asp:ListItem>
+			            <asp:ListItem runat="server" value="WY">WY</asp:ListItem>
+		            </asp:DropDownList>			
+                    <asp:TextBox runat="server" ID="stateTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+            </div>
+            <!--</div> -->
 
-			<asp:Label runat="server" for="policyNumber" id="policyNumberLabel">Policy Number: </asp:Label>
-			<asp:TextBox runat="server" type="text" id="policyNumber"></asp:TextBox>
-			<asp:TextBox runat="server" ID="policyTimer" CssClass="LabelsCSS"></asp:TextBox>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label>Multiple People?</label>
+                           
+                                 <asp:RadioButtonList runat="server" ID="people" RepeatDirection="Horizontal" >
+				                    <asp:ListItem  runat="server" text="Yes" value="yes" ></asp:ListItem>
+				                    <asp:ListItem runat="server" text="No" value="no"></asp:ListItem>
+                                </asp:RadioButtonList>
+                                <asp:TextBox runat="server" ID="peopleTimer" CssClass="LabelsCSS"></asp:TextBox>
+       
+			               
+                      
+                    </div> 
+                </div>
 
-			<asp:Label runat="server" for="lastOfSsn" id="lastOfSsnLabel">Last four of SS#: </asp:Label>
-			<asp:TextBox runat="server" type="text" id="lastOfSsn"></asp:TextBox>
-			<asp:TextBox runat="server" ID="SSNTimer" CssClass="LabelsCSS"></asp:TextBox>
-            <br>
-
-			<asp:Label runat="server" for="address" id="addressLabel">Address: </asp:Label>
-			<asp:TextBox runat="server" type="text" id="address"></asp:TextBox>
-            <asp:TextBox runat="server" ID="addressTimer" CssClass="LabelsCSS"></asp:TextBox>
-
-			<asp:Label runat="server" for="zipCode">Zip:</asp:Label>
-			<asp:TextBox runat="server" type="text" id="zipCode"></asp:TextBox>
-			<asp:TextBox runat="server" ID="ZipTimer" CssClass="LabelsCSS"></asp:TextBox>
-
-            <asp:Label runat="server" for="state">State</asp:Label>
-			<asp:DropDownList runat="server" ID="State">
-			<asp:ListItem runat="server" value="AL">AL</asp:ListItem>
-			<asp:ListItem runat="server" value="AK">AK</asp:ListItem>
-			<asp:ListItem runat="server" value="AZ">AZ</asp:ListItem>
-			<asp:ListItem runat="server" value="AR">AR</asp:ListItem>
-			<asp:ListItem runat="server" value="CA">CA</asp:ListItem>
-			<asp:ListItem runat="server" value="CO">CO</asp:ListItem>
-			<asp:ListItem runat="server" value="CT">CT</asp:ListItem>
-			<asp:ListItem runat="server" value="DE">DE</asp:ListItem>
-			<asp:ListItem runat="server" value="DC">DC</asp:ListItem>
-			<asp:ListItem runat="server" value="FL">FL</asp:ListItem>
-			<asp:ListItem runat="server" value="GA">GA</asp:ListItem>
-			<asp:ListItem runat="server" value="HI">HI</asp:ListItem>
-			<asp:ListItem runat="server" value="ID">ID</asp:ListItem>
-			<asp:ListItem runat="server" value="IL">IL</asp:ListItem>
-			<asp:ListItem runat="server" value="IN">IN</asp:ListItem>
-			<asp:ListItem runat="server" value="IA">IA</asp:ListItem>
-			<asp:ListItem runat="server" value="KS">KS</asp:ListItem>
-			<asp:ListItem runat="server" value="KY">KY</asp:ListItem>
-			<asp:ListItem runat="server" value="LA">LA</asp:ListItem>
-			<asp:ListItem runat="server" value="ME">ME</asp:ListItem>
-			<asp:ListItem runat="server" value="MD">MD</asp:ListItem>
-			<asp:ListItem runat="server" value="MA">MA</asp:ListItem>
-			<asp:ListItem runat="server" value="MI">MI</asp:ListItem>
-			<asp:ListItem runat="server" value="MN">MN</asp:ListItem>
-			<asp:ListItem runat="server" value="MS">MS</asp:ListItem>
-			<asp:ListItem runat="server" value="MO">MO</asp:ListItem>
-			<asp:ListItem runat="server" value="MT">MT</asp:ListItem>
-			<asp:ListItem runat="server" value="NE">NE</asp:ListItem>
-			<asp:ListItem runat="server" value="NV">NV</asp:ListItem>
-			<asp:ListItem runat="server" value="NH">NH</asp:ListItem>
-			<asp:ListItem runat="server" value="NJ">NJ</asp:ListItem>
-			<asp:ListItem runat="server" value="NM">NM</asp:ListItem>
-			<asp:ListItem runat="server" value="NY">NY</asp:ListItem>
-			<asp:ListItem runat="server" value="NC">NC</asp:ListItem>
-			<asp:ListItem runat="server" value="ND">ND</asp:ListItem>
-			<asp:ListItem runat="server" value="OH">OH</asp:ListItem>
-			<asp:ListItem runat="server" value="OK">OK</asp:ListItem>
-			<asp:ListItem runat="server" value="OR">OR</asp:ListItem>
-			<asp:ListItem runat="server" value="PA">PA</asp:ListItem>
-			<asp:ListItem runat="server" value="RI">RI</asp:ListItem>
-			<asp:ListItem runat="server" value="SC">SC</asp:ListItem>
-			<asp:ListItem runat="server" value="SD">SD</asp:ListItem>
-			<asp:ListItem runat="server" value="TN">TN</asp:ListItem>
-			<asp:ListItem runat="server" value="TX">TX</asp:ListItem>
-			<asp:ListItem runat="server" value="UT">UT</asp:ListItem>
-			<asp:ListItem runat="server" value="VT">VT</asp:ListItem>
-			<asp:ListItem runat="server" value="VA">VA</asp:ListItem>
-			<asp:ListItem runat="server" value="WA">WA</asp:ListItem>
-			<asp:ListItem runat="server" value="WV">WV</asp:ListItem>
-			<asp:ListItem runat="server" value="WI">WI</asp:ListItem>
-			<asp:ListItem runat="server" value="WY">WY</asp:ListItem>
-		</asp:DropDownList>			
-        <asp:TextBox runat="server" ID="stateTimer" CssClass="LabelsCSS"></asp:TextBox>
-
-			<br>
-			<label>Multiple People?
-			</label>
-			<asp:RadioButtonList runat="server" ID="people" RepeatDirection="Horizontal">
-				<asp:ListItem  runat="server" text="Yes" value="yes" ></asp:ListItem>
-<%--				<asp:Label runat="server"for="yes">Yes</label>--%>
-				<asp:ListItem runat="server" text="No" value="no"></asp:ListItem>
-<%--				<asp:Label runat="server"for="no">No</label>--%>
-			</asp:RadioButtonList>
-            <asp:TextBox runat="server" ID="peopleTimer" CssClass="LabelsCSS"></asp:TextBox>
-
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <asp:Label runat="server" for="incidentDesc">Incident description:</asp:Label>
+			            <br>
+                        <asp:TextBox runat="server" Width="300px" Height="200px" ID="descriptionTextBox"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="descriptionTime" CssClass="LabelsCSS"></asp:TextBox>
+                    </div>
+			  
+			    </div>
 		
-			<asp:Label runat="server" for="incidentDesc">Incident description:</asp:Label>
-			<br>
-                <asp:TextBox runat="server" Width="250px" Height="200px" ID="descriptionTextBox"></asp:TextBox>
-                <asp:TextBox runat="server" ID="descriptionTime" CssClass="LabelsCSS"></asp:TextBox>
-			<br />
-            <br />   
-		</div>
 
-		<div id="buttons">
-            <asp:Button runat="server" Text="Submit" OnClick="Unnamed_Click" />
-			<asp:TextBox runat="server" type="submit" value="Save"></asp:TextBox>
-		</div>
-		</form>
+            <div class="row">
+		        <div id="buttons" class="col-sm-12 col-md-12 col-lg-12">
+                    <asp:Button runat="server" Text="Submit" OnClick="Unnamed_Click" />
+			        
+			        <asp:TextBox runat="server" type="submit" value="Save"></asp:TextBox>
+		        </div>
+            </div>
 
-	</div>
-	</div>
-	<div class ="logo" style="">
-		<div>Stupid<span>Company</span></div>
-	</div>	
+
+	</form>
+  </div>
+        <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
+</div>
 </body>
     <script type="text/javascript">
+        "use strict"
+        function getDate() // date method used to auto-populate current date 
+                {
+	                var today = new Date();
+	                var dd = today.getDate();
+	                var mm = today.getMonth() +1;
+	                var year = today.getFullYear();
+	                if (dd < 10 ) 
+	                {
+		                dd = '0' + dd;
+	                }
+	                if (mm < 10 )
+	                 {
+	 	                mm= '0' + mm;
+	                 }
+	                 today= year+ '-'+ mm +'-'+dd;
+
+	                 console.log(today);
+	                 document.getElementById("dateTextBox").value = today;
+
+                }
+
+                function initialize(){
+                getDate();
+                }
         $(document).ready(function() {
 	        var timer
             $('#dateTextBox').focusin(function() {
