@@ -82,12 +82,6 @@ C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Project 2.dll
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Project 2.pdb
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\MySql.Data.dll
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\MySql.Data.xml
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\System.Web.Optimization.xml
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Antlr3.Runtime.pdb
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-C:\Users\Martin Hernandez\Documents\Project_2\Project 2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\obj\Debug\Project 2.csprojAssemblyReference.cache
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\obj\Debug\Project 2.csproj.CoreCompileInputs.cache
 C:\Users\Martin Hernandez\Documents\Project_2\Project 2\obj\Debug\Project 2.csproj.CopyComplete
