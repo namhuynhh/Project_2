@@ -10,10 +10,11 @@
 </head>
 
 <body>
+     
 	<div class ="main"> </div>
 	<div class ="gradient"></div>
 	<div class ="logo">
-		<div>Stupid<span>Company</span></div>
+		<div>Generic<span>Company</span></div>
 	</div>
 	<br>
 	<div class ="loginForm">
@@ -26,6 +27,8 @@
             <asp:Button runat="server" Text="Login" ID ="btnLogin" BorderStyle="solid" BorderColor="white" ForeColor="White" BackColor="Transparent" OnClick="LogOn_Click" /><br />
             <asp:Label runat="server" ID ="label1"></asp:Label><br />
             <asp:Button runat="server" OnClick="btnNext_Click" ID="btnNext" Visible="false" Text="Continue"/>
+          <asp:Button runat="server" Text="Admin Login" ID ="adLogin" BorderStyle="solid" BorderColor="white" ForeColor="White" BackColor="Transparent" OnClick="adminButton_Click" /><br />
+         
         </form>
 	</div>
 </body>

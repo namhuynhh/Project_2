@@ -64,6 +64,7 @@ body {
             color: #5379fa;
         }
 
+   
 .loginForm {
     position: absolute;
     top: calc(50% - 75px);
@@ -102,6 +103,21 @@ body {
     }
 
     .loginForm #btnLogin {
+        width: 260px;
+        height: 35px;
+        background: transparent;
+        border: 1px solid #fff;
+        cursor: pointer;
+        border-radius: 2px;
+        color: #a18d6c;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 6px;
+        margin-top: 10px;
+    }
+
+    .loginForm #adLogin {
         width: 260px;
         height: 35px;
         background: transparent;

@@ -50,6 +50,12 @@ namespace Project_2
         {
             Response.Redirect("AfterLogin.aspx");
         }
+        protected void adminButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminPage.aspx");
+            
+        }
+            
     }
 }
 

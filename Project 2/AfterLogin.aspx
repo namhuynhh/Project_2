@@ -10,12 +10,18 @@
 	  <style type="text/css">
 	  	input
 	  	{
-	  		height: 250px;
-	  		width: 200px;
-	  		display: inline;
-	  		margin-top: 50px;
-	  		font-size: 38px;
-	  		font-family: 'Nunito', sans-serif;
+	  
+        height: 35px;
+        background: transparent;
+        border: 1px solid #fff;
+        cursor: pointer;
+        border-radius: 2px;
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 6px;
+        margin-top: 10px;
 	  	}
 	  	.logo
 	  	{
@@ -34,7 +40,7 @@
          </form>
 	</div>
 	<div class ="logo" style="">
-		<div>Stupid<span>Company</span></div>
+		<div>Generic<span>Company</span></div>
 	</div>	
 </body>
 </html>
