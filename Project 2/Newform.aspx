@@ -46,7 +46,7 @@
 			.col-md-12  {width: 		100.00%; }
 			body 		{background-color:white;}
 			[class*="col-md-"] {
-				border: 		;
+				border: /*1px solid red*/	;
 			}
 		}
 
@@ -67,14 +67,15 @@
 			.col-lg-12 	{width: 		100.00%; }
 			body 		{background-color: white;}
 			[class*="col-lg-"] {
-				border:;
+				border: /*1px solid red*/;
 			}
            
 		}
 
   .LabelsCSS
 {
-    display: none;  
+    display: none; 
+    border-radius: 10px;
 }
     .logo div {
         color: #000000;
@@ -100,6 +101,10 @@
    .mainForm{
       border: 2px solid black; 
        border-radius: 10px;
+   }
+   input[type=text]
+   {
+       border-radius:10px;
    }
 	  </style>
 </head>
@@ -128,7 +133,7 @@
                     <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
                     <div class="col-sm-12 col-md-05 col-lg-05">
 
-                        <asp:Label runat="server" for="date" id="dateLabel" CssClass:laLabel>Date: </asp:Label>
+                        <asp:Label runat="server" for="date" id="dateLabel" CssClass="laLabel">Date:</asp:Label>
                         <br />
                         <asp:TextBox runat="server" type="date" id="dateTextBox"></asp:TextBox>
                     </div>
@@ -198,7 +203,7 @@
 			            <asp:TextBox runat="server" type="text" id="address"></asp:TextBox>
                         <asp:TextBox runat="server" ID="addressTimer" CssClass="LabelsCSS"></asp:TextBox>
                     </div>
-                    <div class="col-sm-00 col-md-01 col-lg-02">&nbsp;</div>
+                   <!-- <div class="col-sm-00 col-md-01 col-lg-02">&nbsp;</div> -->
                     <div class="col-sm-12 col-md-03 col-lg-02">
 			            <asp:Label runat="server" for="zipCode">Zip:</asp:Label>
                         <br />
@@ -286,7 +291,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <asp:Label runat="server" for="incidentDesc">Incident description:</asp:Label>
 			            <br>
-                        <asp:TextBox runat="server" Width="300px" Height="200px" ID="descriptionTextBox"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="descriptionTextBox" TextMode="multiline" Columns="50" Rows="6" style="border-radius:10px; text-align:left;" />
                         <asp:TextBox runat="server" ID="descriptionTime" CssClass="LabelsCSS"></asp:TextBox>
                     </div>
 			  

@@ -14,7 +14,7 @@
 	<div class ="main"> </div>
 	<div class ="gradient"></div>
 	<div class ="logo">
-		<div>Generic<span>Company</span></div>
+		<div>Insurance<span>Co.</span></div>
 	</div>
 	<br>
 	<div class ="loginForm">
