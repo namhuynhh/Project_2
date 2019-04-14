@@ -26,7 +26,7 @@
 			.col-sm-12 	{width: 		   100%; }
 			body 		{background-color: white;}
 			[class*="col-sm-"] {
-				border: 1px solid white	;
+				border: 1px solid black	;
 			}
             .laLabel {text-align: left;}
 		}
@@ -45,10 +45,12 @@
 			.col-md-11  {width: 		 91.66%; }
 			.col-md-12  {width: 		100.00%; }
 			body 		{background-color:white;}
+	     
 			[class*="col-md-"] {
-				border: /*1px solid red*/	;
+				border: /*1px solid red	*/;
 			}
 		}
+
   	@media only screen and (min-width: 1024px) {
 			.col-md-00  {display: 		initial; }
 			.col-sm-00  {display:       initial; }
@@ -65,11 +67,13 @@
 			.col-lg-11 	{width: 		 91.66%; }
 			.col-lg-12 	{width: 		100.00%; }
 			body 		{background-color: white;}
+
 			[class*="col-lg-"] {
 				border: /*1px solid red*/;
 			}
            
 		}
+
   .LabelsCSS
 {
     display: none; 
@@ -85,6 +89,7 @@
     .newLogo div span {color: #5379fa;
                     font-size: 7vh;
     }
+
     [class*="col-"] {
 			float: 				left;
 			border-radius: 		10px;
@@ -103,18 +108,27 @@
    {
        border-radius:10px;
    }
-   #people
-   {
-       margin-left: 440px;
+   #people{
+       margin-left: 200px;
    }
+    .float {
+	          float: initial;
+	          position: relative;
+              bottom: 20%;
+	      }
+   #dateTextBox
+   {
+       margin-left:60px;
+   }
+   
 	  </style>
 </head>
 
 <body onload="initialize()">
-    	<div class ="main"style="text-align: center;" >
-        </div>
+    <div class ="main"style="text-align: center;" >
+	</div>  
     <div class ="gradient">
-          <div class="row">
+    <div class="row">
         <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>    
             <div class ="newLogo" style="margin-top:40px;">
 		        <div class="col-lg-06 col-md-08 col-sm-12" style="color:white;">
@@ -132,27 +146,25 @@
 
    <form runat="server" class="mainForm" >
 		   <!-- <div class="verifyingInformation"> -->
-			<br />
+			
                 <div class="row">
-                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
-                    <div class="col-sm-12 col-md-05 col-lg-05">
-
+                   <!-- <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div> -->
+                    <div class="col-sm-12 col-md-06 col-lg-05">
+                        <br />
                         <asp:Label runat="server" for="date" id="dateLabel" CssClass="laLabel">Date:</asp:Label>
                         <br />
-                        <asp:TextBox runat="server" type="date" id="dateTextBox"></asp:TextBox>
+                        <asp:TextBox runat="server" type="date" id="dateTextBox" style="text-align:center;"></asp:TextBox>
                     </div>
-                   
-                        
-                        <asp:TextBox runat="server" ID="dateTime" CssClass="LabelsCSS"> 0 </asp:TextBox>
+                        <asp:TextBox runat="server" ID="dateTime" CssClass="LabelsCSS"></asp:TextBox>
                     
                     <div class="col-sm-00 col-md-04 col-lg-03 ">&nbsp;</div>
-                    <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
+                    <div class="col-sm-00 col-md-02 col-lg-04">&nbsp;</div>
                 </div>
            
 			
                 <div class="row">
-                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
-                    <div class="col-sm-12 col-md-05 col-lg-05">
+                    <!--<div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div> -->
+                    <div class="col-sm-12 col-md-06 col-lg-06">
 			            <asp:Label runat="server" for="firstName" id="fNameLabel" CssClass="laLabel">First Name: </asp:Label>
                         <br />
 			            <asp:TextBox runat="server" type="text" id="firstName"></asp:TextBox>
@@ -167,8 +179,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
-                    <div class="col-sm-12 col-md-05 col-lg-05">
+                  <!--  <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>-->
+                    <div class="col-sm-12 col-md-06 col-lg-06">
                         <asp:Label runat="server" for="phone" id="phoneLabel">Phone: </asp:Label>
                         <br />
 			            <asp:TextBox runat="server" type="text" id="phone"></asp:TextBox>
@@ -184,8 +196,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
-                    <div class="col-sm-12 col-md-05 col-lg-05">
+                  <!--  <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div> -->
+                    <div class="col-sm-12 col-md-06 col-lg-06">
 			            <asp:Label runat="server" for="policyNumber" id="policyNumberLabel">Policy Number: </asp:Label>
                         <br />
 			            <asp:TextBox runat="server" type="text" id="policyNumber"></asp:TextBox>
@@ -200,25 +212,34 @@
                 </div>
             
           <div class="row">
-                    <div class="col-sm-00 col-md-01 col-lg-01" style="margin-left: 80px;">&nbsp;</div>
-                    <div class="col-sm-12 col-md-04 col-lg-03">
+                   <!-- <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>-->
+                    <div class="col-sm-12 col-md-06 col-lg-06">
                         <asp:Label runat="server" for="address" id="addressLabel">Address: </asp:Label>
                         <br />
 			            <asp:TextBox runat="server" type="text" id="address"></asp:TextBox>
                         <asp:TextBox runat="server" ID="addressTimer" CssClass="LabelsCSS"></asp:TextBox>
                     </div>
-                   <!-- <div class="col-sm-00 col-md-01 col-lg-02">&nbsp;</div> -->
-                    <div class="col-sm-12 col-md-03 col-lg-02" style="margin-left:40px;">
+                    <!--<div class="col-sm-00 col-md-01 col-lg-02">&nbsp;</div> -->
+                    <div class="col-sm-12 col-md-06 col-lg-06">
 			            <asp:Label runat="server" for="zipCode">Zip:</asp:Label>
                         <br />
 			            <asp:TextBox runat="server" type="text" id="zipCode"></asp:TextBox>
 			            <asp:TextBox runat="server" ID="ZipTimer" CssClass="LabelsCSS"></asp:TextBox>
                     </div>
-                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
-                    <div class="col-sm-12 col-md-02 col-lg-03">
-                        <asp:Label runat="server" for="state">State: </asp:Label>
+                    <!--<div class="col-sm-00 col-md-07 col-lg-07">&nbsp;</div>-->
+                    <div class="col-sm-12 col-md-07 col-lg-07">
+                        <span runat="server">&nbsp;&nbsp;</span>     
+                        <label style="margin-right:90px;">Multiple People?</label>                    
+                         <asp:RadioButtonList runat="server" ID="people" RepeatDirection="Horizontal" >
+				                <asp:ListItem  runat="server" text="Yes" value="yes" style="text-align=right;"></asp:ListItem>
+				                <asp:ListItem runat="server" text="No" value="no" style="margin-left:10px;"></asp:ListItem>
+                            </asp:RadioButtonList>
+                            <asp:TextBox runat="server" ID="peopleTimer" CssClass="LabelsCSS"></asp:TextBox>
+                    </div> 
+                    <div class="col-sm-12 col-md-05 col-lg-05">
+                        <asp:Label runat="server" for="state" style="margin-right:75px;">State: </asp:Label>
                         <br />
-			            <asp:DropDownList runat="server" ID="State">
+			            <asp:DropDownList runat="server" ID="State" style="margin-right:75px;">
 			            <asp:ListItem runat="server" value="AL">AL</asp:ListItem>
 			            <asp:ListItem runat="server" value="AK">AK</asp:ListItem>
 			            <asp:ListItem runat="server" value="AZ">AZ</asp:ListItem>
@@ -277,42 +298,26 @@
             <!--</div> -->
        <br />   
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12" style="text-align:center;">
-                        <label>Multiple People?</label>
-                                 <asp:RadioButtonList runat="server" ID="people" align="center" RepeatDirection="Horizontal">
-				                    <asp:ListItem  runat="server" text="Yes" value="yes"></asp:ListItem>
-				                    <asp:ListItem runat="server" text="No" value="no"></asp:ListItem>
-                                </asp:RadioButtonList>
-                                <asp:TextBox runat="server" ID="peopleTimer" CssClass="LabelsCSS"></asp:TextBox>
-                    </div> 
-                </div>
-
-                <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <asp:Label runat="server" for="incidentDesc">Incident description:</asp:Label>
 			            <br>
-                        <asp:TextBox runat="server" ID="descriptionTextBox" TextMode="multiline" Columns="50" Rows="6" style="border-radius:10px; text-align:left;" />
+                        <asp:TextBox runat="server" ID="descriptionTextBox" TextMode="multiline" Columns="50" Rows="8" style="border-radius:10px; text-align:left;" />
                         <asp:TextBox runat="server" ID="descriptionTime" CssClass="LabelsCSS"></asp:TextBox>
                     </div>
-			  
 			    </div>
-		
-
+       <br />
             <div class="row">
 		        <div id="buttons" class="col-sm-12 col-md-12 col-lg-12">
                     <asp:Button runat="server" Text="Submit" OnClick="Unnamed_Click" />
-			        
 			        <asp:TextBox runat="server" type="submit" value="Save"></asp:TextBox>
 		        </div>
             </div>
-
-
+       <br />
 	</form>
   </div>
         <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
 </div>
         </div>
-
 </body>
     <script type="text/javascript">
         "use strict"
@@ -331,16 +336,19 @@
 	 	                mm= '0' + mm;
 	                 }
 	                 today= year+ '-'+ mm +'-'+dd;
+
 	                 console.log(today);
 	                 document.getElementById("dateTextBox").value = today;
+
                 }
+
                 function initialize(){
                 getDate();
                 }
         $(document).ready(function() {
-            var timer
+	        var timer
             $('#dateTextBox').focusin(function() {
-                 var sec = 0;
+                  var sec = 0;
                 timer = setInterval(function () {
                     $('#<%=dateTime.ClientID%>').val("00:00:" + sec);
                     document.getElementById('dateTime').innerHTML ='00:'+sec;
@@ -351,6 +359,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#firstName').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -363,6 +372,7 @@
                     clearTimeout(timer, 1000)                 
                 }
                 });
+
                     $('#lastName').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -375,6 +385,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#phone').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -387,6 +398,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#dateOfIncident').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -399,6 +411,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#policyNumber').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -411,6 +424,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#lastOfSsn').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -423,6 +437,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#address').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -435,6 +450,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
                     $('#zipCode').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -447,6 +463,7 @@
                     clearTimeout(timer,1000)
                 }
                 });
+
              $('#descriptionTextBox').focusin(function() {
                   var sec = 0;
                  timer = setInterval(function () {
@@ -462,4 +479,3 @@
         });
 </script>
 </html>
-
