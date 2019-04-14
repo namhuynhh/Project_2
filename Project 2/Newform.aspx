@@ -6,7 +6,7 @@
 	
 <meta charset="UTF-8">
 	<title>WillCode4Food - Login Form</title>
-	 <!-- <link rel="stylesheet" type="text/css" href="Project.css"> -->
+	  <link rel="stylesheet" type="text/css" href="Project.css"> 
     	<script type="text/javascript" 
           src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
         </script>
@@ -26,7 +26,7 @@
 			.col-sm-12 	{width: 		   100%; }
 			body 		{background-color: white;}
 			[class*="col-sm-"] {
-				border: 1px solid black	;
+				border: 1px solid white	;
 			}
             .laLabel {text-align: left;}
 		}
@@ -49,7 +49,6 @@
 				border: /*1px solid red*/	;
 			}
 		}
-
   	@media only screen and (min-width: 1024px) {
 			.col-md-00  {display: 		initial; }
 			.col-sm-00  {display:       initial; }
@@ -71,23 +70,21 @@
 			}
            
 		}
-
   .LabelsCSS
 {
     display: none; 
     border-radius: 10px;
 }
-    .logo div {
+    .newLogo div {
         color: #000000;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 7vh;
         font-weight: 200;
-        border: 4px solid black;
+        border: 4px solid white;
     }
-    .logo div span {color: #5379fa;
+    .newLogo div span {color: #5379fa;
                     font-size: 7vh;
     }
-
     [class*="col-"] {
 			float: 				left;
 			border-radius: 		10px;
@@ -99,21 +96,28 @@
 		}
    .radioButtons{text-align:center;}
    .mainForm{
-      border: 2px solid black; 
+      border: 2px solid white; 
        border-radius: 10px;
    }
    input[type=text]
    {
        border-radius:10px;
    }
+   #people
+   {
+       margin-left: 440px;
+   }
 	  </style>
 </head>
 
 <body onload="initialize()">
-    <div class="row">
+    	<div class ="main"style="text-align: center;" >
+        </div>
+    <div class ="gradient">
+          <div class="row">
         <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>    
-            <div class ="logo" style="">
-		        <div class="col-lg-06 col-md-08 col-sm-12">
+            <div class ="newLogo" style="margin-top:40px;">
+		        <div class="col-lg-06 col-md-08 col-sm-12" style="color:white;">
                     Insurance<span>CO.</span>
 		        </div>
 	        </div>
@@ -128,7 +132,7 @@
 
    <form runat="server" class="mainForm" >
 		   <!-- <div class="verifyingInformation"> -->
-			
+			<br />
                 <div class="row">
                     <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
                     <div class="col-sm-12 col-md-05 col-lg-05">
@@ -196,7 +200,7 @@
                 </div>
             
           <div class="row">
-                    <div class="col-sm-00 col-md-01 col-lg-01">&nbsp;</div>
+                    <div class="col-sm-00 col-md-01 col-lg-01" style="margin-left: 80px;">&nbsp;</div>
                     <div class="col-sm-12 col-md-04 col-lg-03">
                         <asp:Label runat="server" for="address" id="addressLabel">Address: </asp:Label>
                         <br />
@@ -204,7 +208,7 @@
                         <asp:TextBox runat="server" ID="addressTimer" CssClass="LabelsCSS"></asp:TextBox>
                     </div>
                    <!-- <div class="col-sm-00 col-md-01 col-lg-02">&nbsp;</div> -->
-                    <div class="col-sm-12 col-md-03 col-lg-02">
+                    <div class="col-sm-12 col-md-03 col-lg-02" style="margin-left:40px;">
 			            <asp:Label runat="server" for="zipCode">Zip:</asp:Label>
                         <br />
 			            <asp:TextBox runat="server" type="text" id="zipCode"></asp:TextBox>
@@ -271,19 +275,15 @@
                     </div>
             </div>
             <!--</div> -->
-
+       <br />   
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="col-sm-12 col-md-12 col-lg-12" style="text-align:center;">
                         <label>Multiple People?</label>
-                           
-                                 <asp:RadioButtonList runat="server" ID="people" RepeatDirection="Horizontal" >
-				                    <asp:ListItem  runat="server" text="Yes" value="yes" ></asp:ListItem>
+                                 <asp:RadioButtonList runat="server" ID="people" align="center" RepeatDirection="Horizontal">
+				                    <asp:ListItem  runat="server" text="Yes" value="yes"></asp:ListItem>
 				                    <asp:ListItem runat="server" text="No" value="no"></asp:ListItem>
                                 </asp:RadioButtonList>
                                 <asp:TextBox runat="server" ID="peopleTimer" CssClass="LabelsCSS"></asp:TextBox>
-       
-			               
-                      
                     </div> 
                 </div>
 
@@ -311,6 +311,8 @@
   </div>
         <div class="col-sm-00 col-md-02 col-lg-03">&nbsp;</div>
 </div>
+        </div>
+
 </body>
     <script type="text/javascript">
         "use strict"
@@ -329,19 +331,16 @@
 	 	                mm= '0' + mm;
 	                 }
 	                 today= year+ '-'+ mm +'-'+dd;
-
 	                 console.log(today);
 	                 document.getElementById("dateTextBox").value = today;
-
                 }
-
                 function initialize(){
                 getDate();
                 }
         $(document).ready(function() {
-	        var timer
+            var timer
             $('#dateTextBox').focusin(function() {
-                  var sec = 0;
+                 var sec = 0;
                 timer = setInterval(function () {
                     $('#<%=dateTime.ClientID%>').val("00:00:" + sec);
                     document.getElementById('dateTime').innerHTML ='00:'+sec;
@@ -352,7 +351,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#firstName').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -365,7 +363,6 @@
                     clearTimeout(timer, 1000)                 
                 }
                 });
-
                     $('#lastName').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -378,7 +375,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#phone').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -391,7 +387,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#dateOfIncident').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -404,7 +399,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#policyNumber').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -417,7 +411,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#lastOfSsn').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -430,7 +423,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#address').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -443,7 +435,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
                     $('#zipCode').focusin(function() {
                   var sec = 0;
                         timer = setInterval(function () {
@@ -456,7 +447,6 @@
                     clearTimeout(timer,1000)
                 }
                 });
-
              $('#descriptionTextBox').focusin(function() {
                   var sec = 0;
                  timer = setInterval(function () {
@@ -471,5 +461,5 @@
             });
         });
 </script>
-
 </html>
+

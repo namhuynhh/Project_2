@@ -23,21 +23,33 @@
 
 <body>
 	<div class ="main"style="text-align: center;" >
+	</div>  
+	<div class ="gradient">
+      <form runat="server">
            <table style="margin-left:400px; margin-top:150px; border: 1px solid #fff">
             <tr >
-                <td style="width:400px;">Form Name:</td>
+                <td style="width:400px;">Form ID:</td>
                 <td style="width:250px;">Date Started:</td>
                 <td style="width:400px;">Action:</td>
             </tr>
-        </table>
-	</div>
-	<div class ="gradient">
-     
 
+<asp:Repeater runat="server" ID="savedForms">
+        <ItemTemplate>
+                  <tr>
+                <td><%#DataBinder.Eval(Container.DataItem, "formID")%></td>
+                <td><%#DataBinder.Eval(Container.DataItem, "date")%></td>
+                <td><asp:LinkButton  ID="openForm" OnCommand="openForm_Click" CommandArgument='<%#DataBinder.Eval(Container.DataItem, "formID")%>'  Text="Open Saved Form" runat="server"></asp:LinkButton></td>
+                   </tr>
+        </ItemTemplate>
+    </asp:Repeater>
+        </table>
+	</form>
 	</div>
 	<div class ="logo" style="">
 		<div>Stupid<span>Company</span></div>
 	</div>	
 </body>
 </html>
+
+
 
