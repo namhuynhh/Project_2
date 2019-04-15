@@ -20,7 +20,38 @@ namespace Project_2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.Open();
+            var formId = Request.QueryString["formID"];
+            int userId = Convert.ToInt32(Application["userId"]);
+
+            if (formId != null)
+            {
+                using (MySqlConnection con = new MySqlConnection(ConfigurationManager.ConnectionStrings["myDB"].ConnectionString))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("SELECT `date`, `firstName`, `lastName`, `phone`, `dateOfIncident`, `policyNumber`, `ssn`, `address`, `zipCode`, `state`, `multiplePeople`, `description` FROM `savedforms` WHERE `formID`= '" + formId + "' AND `userID` = '" + userId + "'"))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = con;
+                        con.Open();
+                        using (MySqlDataReader sdr = cmd.ExecuteReader())
+                        {
+                            sdr.Read();
+                            dateTextBox.Text = (sdr["date"].ToString());
+                            firstName.Text = (sdr["firstName"].ToString());
+                            lastName.Text = (sdr["lastName"].ToString());
+                            phone.Text = (sdr["phone"].ToString());
+                            dateOfIncident.Text = (sdr["dateOfIncident"].ToString());
+                            policyNumber.Text = (sdr["policyNumber"].ToString());
+                            lastOfSsn.Text = (sdr["ssn"].ToString());
+                            address.Text = (sdr["address"].ToString());
+                            zipCode.Text = (sdr["zipCode"].ToString());
+                            State.Text = (sdr["state"].ToString());
+                            people.Text = (sdr["multiplePeople"].ToString());
+                            descriptionTextBox.Text = (sdr["description"].ToString());
+                        }
+
+                    }
+                }
+            }
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
